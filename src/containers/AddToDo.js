@@ -7,8 +7,8 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/AntDesign';
+import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/Entypo';
 import { connect } from 'react-redux';
 import { addToDo } from '../actions'
 class AddToDo extends Component {
@@ -27,12 +27,12 @@ class AddToDo extends Component {
         <TextInput
           onChangeText={(text) => this.setState({ text })}
           value={this.state.text}
-          placeholder='E.g. Complete Project..'
+          placeholder='E.g. Buy Grocery..'
           style={{ fontSize: 20, borderWidth: 2, borderColor: '#f2f2e1', backgroundColor: '#eaeaea', height: 50, flex: 1, padding: 10 }}
         />
         <TouchableOpacity onPress={() => this.addToDo(this.state.text)}>
           <View style={{ height: 50, backgroundColor: '#eaeaea', justifyContent: 'center', alignItems: 'center' }}>
-            <Icon name="plus" size={30} color='orange' style={{ padding: 10 }} />
+            <Icon name='plus' size={30} color='limegreen' style={{ padding: 10 }} />
           </View>
         </TouchableOpacity>
       </View>
@@ -47,18 +47,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    backgroundColor: '#F5FCFF'
+  }
+
 });
 
 
